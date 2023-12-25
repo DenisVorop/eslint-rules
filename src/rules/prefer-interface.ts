@@ -19,6 +19,7 @@ export const preferInterfaceRule = ESLintUtils.RuleCreator.withoutDocs({
     return {
       TSTypeAliasDeclaration(node) {
         if (
+          !node.typeParameters &&
           node.typeAnnotation &&
           node.typeAnnotation.type === AST_NODE_TYPES.TSTypeLiteral
         ) {
