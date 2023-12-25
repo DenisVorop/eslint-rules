@@ -1,10 +1,11 @@
 {
   "name": "eslint-plugin-ts-custom-rules",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "rm -rf ./dist && tsc -p ./tsconfig.json"
+    "build": "rm -rf ./dist && tsc -p ./tsconfig.json",
+    "postbuild": "cp package.json dist"
   },
   "keywords": [],
   "author": "",
